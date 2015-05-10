@@ -53,3 +53,7 @@ val ns2: Rand[List[Int]] = for {
 
 ns.run(rng)
 ns2.run(rng)
+
+state.run(rng)
+val nNumbers = List(state, state, state)
+State.sequence(nNumbers).run(rng)
